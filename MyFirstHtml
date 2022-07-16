@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깨랑까랑</title>
+</head>
+<body>
+    <h1 style="text-align: center;">반갑다 인간들아</h1>
+    <div style="text-align: center; ">
+        <form id = "submit">
+            <fieldset id = "age">
+                <legend style="text-align: left;"><b>How old are you?</b></legend>
+                <b>나이가 어떻게 되나요?</b><br>
+                <input type = "range" min = 0 max = 100 style="text-align: center; width : 70%; height: 10px;">
+                <button>Enter</button>
+            </fieldset><br>
+            <fieldset>
+
+            </fieldset>
+        </form>
+    </div>
+    <link rel = "stylesheet" href = "연습보조.css">
+</body>
+</html>
