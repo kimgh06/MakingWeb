@@ -1,0 +1,10 @@
+#submit {
+    border: 2px solid; 
+    margin-left:250px; 
+    margin-right:250px; 
+    top:30px;
+}
+#age {
+    border: 2px solid; 
+    background-color: rgb(220, 216, 216); 
+}
