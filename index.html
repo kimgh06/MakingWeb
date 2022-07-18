@@ -7,16 +7,19 @@
     <title>깨랑까랑</title>
 </head>
 <body>
-    <div class = "header" style = "text-align:center; margin-left:-106px">
+    <header class = "header">
         <img src = "alien.png" alt = "외계인" class = "alien">
         <b>반갑다 인간들아</b>
-    </div>
+    </header>
     <div style="text-align: center;">
         <form id = "submit">
             <fieldset id = "age">
                 <legend style="text-align: left;"><b>How old are you?</b></legend>
-                <b>나이가 어떻게 되나요?</b><br>
-                <input type = "range" min = 0 max = 100 style="text-align: center; width : 70%; height: 10px;">
+                <b>(만)나이가 어떻게 되나요?</b><br>
+                <div>
+                    <input type="range" class = "points" name="points" min="0" max="500" step="1" value="0" oninput="document.getElementById('value2').innerHTML=this.value;">
+                    <span id="value2">0</span>
+                </div>
             </fieldset>
             <fieldset id = "gender">
                 <legend style = "text-align: left;"><b>What your gender?</b></legend>
@@ -27,7 +30,21 @@
                     <option>female</option>
                 </select>
             </fieldset>
-            <button>Enter</button>
+            <fieldset id = "chicken">
+                <legend class="left"><b>Do you like Fried Chicken?</b></legend>
+                <b>치킨 좋아 하나?</b>
+                <select style = "font-size: 17px;">
+                    <option>Yes</option>
+                    <option>NO</option>
+                </select>
+            </fieldset>
+            <fieldset id = "whatcolor">
+                <legend class = "left"><b>What your favorite color?</b></legend>
+                <b>네가 가장 좋아하는 색상</b>
+                <input type = "color">
+            </fieldset>
+            <hr>
+            <button>제출</button>
         </form>
     </div>
     <div id = "center">
@@ -41,6 +58,7 @@
                 <li>자원을 약탈하여 우리가 잘 먹고 잘 살기 위해</li>
                 <li>지구상에 있는 모든 정부를 없애기 위해</li>
                 <li>"와 샌즈"를 합법적으로 외치기 위해</li>
+                <li>나도 치킨 먹고싶단 말야!</li>
             </ol>
         </ul>
     </div>
