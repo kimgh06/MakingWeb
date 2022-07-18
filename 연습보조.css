@@ -12,3 +12,11 @@
     border: 2px solid; 
     background-color: rgb(220, 216, 216); 
 }
+#center {
+    text-align: center;
+    margin-left:200px; 
+    margin-right:200px; 
+}
+.left{
+    text-align: left;
+}
