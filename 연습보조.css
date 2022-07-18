@@ -12,6 +12,14 @@
     border: 2px solid; 
     background-color: rgb(220, 216, 216); 
 }
+#chicken {
+    border: 2px solid; 
+    background-color: rgb(220, 216, 216); 
+}
+#whatcolor {
+    border: 2px solid; 
+    background-color: rgb(220, 216, 216); 
+}
 #center {
     text-align: center;
     margin-left:200px; 
@@ -30,4 +38,9 @@
     margin-left: 250px;
     vertical-align: top;
     text-align: center;
+}
+.points{
+    text-align: center; 
+    width : 70%; 
+    height: 10px;
 }
