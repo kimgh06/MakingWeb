@@ -20,3 +20,14 @@
 .left{
     text-align: left;
 }
+.alien {
+    width : 20%;
+    height : 20%;
+    margin-left: -106px;
+}
+.header{
+    font-size: 20px;
+    margin-left: 250px;
+    vertical-align: top;
+    text-align: center;
+}
