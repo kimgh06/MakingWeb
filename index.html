@@ -17,34 +17,35 @@
                 <legend style="text-align: left;"><b>How old are you?</b></legend>
                 <b>(만)나이가 어떻게 되나요?</b><br>
                 <div>
-                    <input type="range" class = "points" name="points" min="0" max="500" step="1" value="0" oninput="document.getElementById('value2').innerHTML=this.value;">
-                    <span id="value2">0</span>
+                    <input type="range" class = "agepoints" name="points" min="0" max="150" 
+                    step="1" value="20" oninput="document.getElementById('value2').innerHTML=this.value;">
+                    <span id="value2">20</span>
                 </div>
             </fieldset>
             <fieldset id = "gender">
                 <legend style = "text-align: left;"><b>What your gender?</b></legend>
                 <b>성별이 뭔가요?</b>
-                <select style = "font-size: 17px;">
-                    <option>None</option>
-                    <option>male</option>
-                    <option>female</option>
+                <select class = "yourgender" style = "font-size: 17px;">
+                    <option value = "none">None</option>
+                    <option value = "male">male</option>
+                    <option value = "female">female</option>
                 </select>
             </fieldset>
             <fieldset id = "chicken">
                 <legend class="left"><b>Do you like Fried Chicken?</b></legend>
-                <b>치킨 좋아 하나?</b>
-                <select style = "font-size: 17px;">
-                    <option>Yes</option>
-                    <option>NO</option>
+                <b>치킨을 좋아 하나요?</b>
+                <select class = "DoULikeChicken" style = "font-size: 17px;">
+                    <option value = "no">No</option>
+                    <option value = "yes">Yes</option>
                 </select>
             </fieldset>
             <fieldset id = "whatcolor">
                 <legend class = "left"><b>What your favorite color?</b></legend>
                 <b>네가 가장 좋아하는 색상</b>
-                <input type = "color">
+                <input class = "color" type = "color">
             </fieldset>
             <hr>
-            <button>제출</button>
+            <button class = "submit">제출</button>
         </form>
     </div>
     <div id = "center">
@@ -54,7 +55,7 @@
             <ol type = "1" class = "left">
                 <li>지구를 침략하기 위해</li>
                 <li>지구를 침략해서 너희를 종으로 부리기 위해</li>
-                <li>우둔한 너희들을 가르치기 위해</li>
+                <li>너희들의 문명을 분석해 학계에 보고하기 위해</li>
                 <li>자원을 약탈하여 우리가 잘 먹고 잘 살기 위해</li>
                 <li>지구상에 있는 모든 정부를 없애기 위해</li>
                 <li>"와 샌즈"를 합법적으로 외치기 위해</li>
@@ -63,5 +64,6 @@
         </ul>
     </div>
     <link rel = "stylesheet" href = "연습보조.css">
+    <script src = "보조.js"></script>
 </body>
 </html>
