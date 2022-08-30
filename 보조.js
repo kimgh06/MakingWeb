@@ -1,20 +1,21 @@
 let submits = [];
 const question = document.querySelector(".question");
+
 const checkList = document.querySelector("#checkList");
-const checkListGender = document.querySelector("#span1");
+let checkSpan = document.querySelector("#checkSpan");
 
 const submitForm = document.querySelector("#submit");
 const age = document.querySelector(".agepoints");
 const color = document.querySelector(".color");
-
 const yourgender = document.querySelector(".yourgender");
-const yourGenderValue = yourgender.options[yourgender.selectedIndex].value;
-
+let checkGender;
+let checkChicken;
 const yourChicken = document.querySelector(".DoULikeChicken");
-const chickenValue = yourChicken.options[yourChicken.selectedIndex].value;
 
 function sub(event){
     event.preventDefault();
+    const yourGenderValue = yourgender.options[yourgender.selectedIndex].value;
+    const chickenValue = yourChicken.options[yourChicken.selectedIndex].value;
     const ageValue = age.value;
     const colorValue = color.value;
     const asdf = {
@@ -25,17 +26,33 @@ function sub(event){
     };
     submits.push(asdf);
     question.classList.add("hidden");
+    localStorage.setItem("submits", JSON.stringify(asdf));
     checkList.classList.remove("hidden");
-    if (yourGenderValue === female){
-        checkListGender.innerText = 여성;
+    chick(chickenValue);
+    whatsYourGender(yourGenderValue);
+    checkSpan.style.color = colorValue;
+    checkSpan.innerText = `당신은 치킨을 ${checkChicken} ${ageValue}세 ${checkGender}이군요!`;
+}
+
+function whatsYourGender(yourGenderValue){
+    if (yourGenderValue === "female"){
+        checkGender = '여성';
     }
-    else if (yourGenderValue === male){
-        checkListGender.innerText = 남성;
+    else if (yourGenderValue === "male"){
+        checkGender = '남성';
     }
     else {
-        checkListGender.innerText = 뭐여;
+        checkGender = '성별을 알 수 없는 사람';
     }
-    localStorage.setItem("submits", JSON.stringify(asdf));
+}
+
+function chick(like){
+    if(like === 'yes'){
+        checkChicken = "좋아하는";
+    }
+    else if(like === 'no'){
+        checkChicken = "좋아하지 않는";
+    }
 }
 
 submitForm.addEventListener("submit", sub);
