@@ -1,7 +1,7 @@
 #submit {
     border: 2px solid; 
-    margin-left:250px; 
-    margin-right:250px; 
+    margin-left:20%; 
+    margin-right:20%; 
     top:30px;
 }
 #age {
@@ -22,8 +22,8 @@
 }
 #center {
     text-align: center;
-    margin-left:200px; 
-    margin-right:200px; 
+    margin-left:20%; 
+    margin-right:20%; 
 }
 .left{
     text-align: left;
