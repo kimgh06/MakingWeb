@@ -5,6 +5,8 @@ const checkList = document.querySelector("#checkList");
 let checkSpan = document.querySelector("#checkSpan");
 
 const submitForm = document.querySelector("#submit");
+const retry = document.querySelector(".retry");
+
 const age = document.querySelector(".agepoints");
 const color = document.querySelector(".color");
 const yourgender = document.querySelector(".yourgender");
@@ -53,6 +55,11 @@ function chick(like){
     else if(like === 'no'){
         checkChicken = "좋아하지 않는";
     }
+}
+
+function Re(){
+    question.classList.remove("hidden");
+    checkList.classList.add("hidden");
 }
 
 submitForm.addEventListener("submit", sub);
