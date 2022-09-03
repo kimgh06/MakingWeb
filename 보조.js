@@ -1,9 +1,7 @@
 let submits = [];
 const question = document.querySelector(".question");
-
 const checkList = document.querySelector("#checkList");
 let checkSpan = document.querySelector("#checkSpan");
-
 const submitForm = document.querySelector("#submit");
 const retry = document.querySelector(".retry");
 
@@ -60,6 +58,11 @@ function chick(like){
 function Re(){
     question.classList.remove("hidden");
     checkList.classList.add("hidden");
+    age.value = "20";
+    document.getElementById('value2').innerHTML="20";
+    yourChicken.value = "no";
+    yourgender.value = "none";
+    color.value = "#ff0000";
 }
 
 submitForm.addEventListener("submit", sub);
