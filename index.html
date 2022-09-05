@@ -1,69 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>깨랑까랑</title>
 </head>
+
 <body>
-    <header class = "header">
-        <img src = "alien.png" alt = "외계인" class = "alien"><br>
-        <b>반갑다 인간들아</b>
+    <header class="header">
+        <div>
+            <div id="alien1">
+                <img src="img/alien.png" alt="외계인" class="alien" onclick = "alienAngry()"><br>
+                <b>반갑다 인간들아</b>
+            </div>
+            <div id="alien2" class="hidden">
+                <img src="img/aliendinner.jpg" alt="너는 외계인의 먹이" class="alien" onclick = "alienNormal()"><br>
+                <b>너를 잡아 먹겠다.</b>
+            </div>
+        </div>
     </header>
-    <div class = question style="text-align: center;">
-        <form id = "submit">
-            <fieldset id = "age">
+    <div class=question style="text-align: center;">
+        <form id="submit">
+            <fieldset id="age">
                 <legend style="text-align: left;"><b>How old are you?</b></legend>
                 <b>(만)나이가 어떻게 되나요?</b><br>
                 <div>
-                    <input type="range" class = "agepoints" name="points" min="0" max="150" 
-                    step="1" value="20" oninput="document.getElementById('value2').innerHTML=this.value;">
+                    <input type="range" class="agepoints" name="points" min="0" max="150" step="1" value="20"
+                        oninput="document.getElementById('value2').innerHTML=this.value;">
                     <span id="value2">20</span>
                 </div>
             </fieldset>
-            <fieldset id = "gender">
-                <legend style = "text-align: left;"><b>What's your gender?</b></legend>
+            <fieldset id="gender">
+                <legend style="text-align: left;"><b>What's your gender?</b></legend>
                 <b>성별이 뭔가요?</b>
-                <select class = "yourgender" style = "font-size: 17px;">
-                    <option value = "none">None</option>
-                    <option value = "male">male</option>
-                    <option value = "female">female</option>
+                <select class="yourgender" style="font-size: 17px;">
+                    <option value="none">None</option>
+                    <option value="male">male</option>
+                    <option value="female">female</option>
                 </select>
             </fieldset>
-            <fieldset id = "chicken">
+            <fieldset id="chicken">
                 <legend class="left"><b>Do you like Fried Chicken?</b></legend>
                 <b>치킨을 좋아 하나요?</b>
-                <select class = "DoULikeChicken" style = "font-size: 17px;">
-                    <option value = "no">No</option>
-                    <option value = "yes">Yes</option>
+                <select class="DoULikeChicken" style="font-size: 17px;">
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
                 </select>
             </fieldset>
-            <fieldset id = "whatcolor">
-                <legend class = "left"><b>What your favorite color?</b></legend>
+            <fieldset id="whatcolor">
+                <legend class="left"><b>What your favorite color?</b></legend>
                 <b>네가 가장 좋아하는 색상</b>
-                <input class = "color" type = "color" value = "#ff0000">
+                <input class="color" type="color" value="#ff0000">
             </fieldset>
             <hr>
-            <button class = "submit">제출</button>
+            <button class="submit">제출</button>
         </form>
     </div>
-    <div id = "checkList" class = "hidden">
+    <div id="checkList" class="hidden">
         <div>
             <span>오, 흥미로운 결과가 나왔습니다!</span><br>
             <span id="checkSpan"></span><br><br>
             <b>조만간 찾아 뵙도록 하겠습니다.</b>
         </div>
         <div>
-            <button class="retry" onclick = "Re();">다시하기</button><br>
-            <span class = "triedSpan"></span>
+            <button class="retry" onclick="Re();">다시하기</button><br>
+            <span class="triedSpan"></span>
         </div>
     </div>
-    <div id = "center">
+    <div id="center">
         <hr>
         <ul>
             <h2>우리가 개인 정보 수집을 하려는 이유</h2>
-            <ol type = "1" class = "left">
+            <ol type="1" class="left">
                 <li>지구를 침략하기 위해</li>
                 <li>지구를 침략해서 너희를 종으로 부리기 위해</li>
                 <li>너희들의 문명을 분석해 학계에 보고하기 위해</li>
@@ -74,7 +84,8 @@
             </ol>
         </ul>
     </div>
-    <link rel = "stylesheet" href = "연습보조.css">
-    <script src = "보조.js"></script>
+    <link rel="stylesheet" href="연습보조.css">
+    <script src="보조.js"></script>
 </body>
+
 </html>
