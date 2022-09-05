@@ -2,6 +2,7 @@ let submits = [];
 const question = document.querySelector(".question");
 const checkList = document.querySelector("#checkList");
 let checkSpan = document.querySelector("#checkSpan");
+let triedSpan = document.querySelector(".triedSpan");
 const submitForm = document.querySelector("#submit");
 const retry = document.querySelector(".retry");
 
@@ -11,7 +12,7 @@ const yourgender = document.querySelector(".yourgender");
 let checkGender;
 let checkChicken;
 const yourChicken = document.querySelector(".DoULikeChicken");
-
+let tried = 1;
 function sub(event){
     event.preventDefault();
     const yourGenderValue = yourgender.options[yourgender.selectedIndex].value;
@@ -32,6 +33,21 @@ function sub(event){
     whatsYourGender(yourGenderValue);
     checkSpan.style.color = colorValue;
     checkSpan.innerText = `당신은 치킨을 ${checkChicken} ${ageValue}세 ${checkGender}이군요!`;
+    if (tried == 10){
+        triedSpan.innerText = "열 번 시도하셨습니다.";
+    }
+    else if (tried == 4){
+        triedSpan.innerText = "404 NOT FOUND";
+    }
+    else if (tried == 7){
+        triedSpan.innerText = "당신은 정말 운이 좋으신지도 모르겠습니다.";
+    }
+    else if(tried == 1101){
+        triedSpan.innerText = "이 날짜는 제작자의 생일입니다.";
+    }
+    else {
+        triedSpan.innerText = `${tried}회 시도하셨습니다.`;
+    }
 }
 
 function whatsYourGender(yourGenderValue){
@@ -63,6 +79,7 @@ function Re(){
     yourChicken.value = "no";
     yourgender.value = "none";
     color.value = "#ff0000";
+    tried = tried + 1;
 }
 
 submitForm.addEventListener("submit", sub);
