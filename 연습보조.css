@@ -67,3 +67,13 @@
     font-size: 20px;
     margin-top: 40px;
 }
+
+aside {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 17%;
+    height:100%;
+    background-color: rgb(105, 191, 225);
+    transition: all 0.5s ease;
+}
