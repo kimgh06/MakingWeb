@@ -1,7 +1,7 @@
 #submit {
     border: 2px solid;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 17%;
+    margin-right: 17%;
     top: 30px;
 }
 
@@ -27,8 +27,8 @@
 
 #center {
     text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 17%;
+    margin-right: 17%;
 }
 
 .left {
@@ -76,4 +76,8 @@ aside {
     height:100%;
     background-color: rgb(105, 191, 225);
     transition: all 0.5s ease;
+}
+
+#main{
+    margin-left: 17%;
 }
