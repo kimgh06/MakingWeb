@@ -82,4 +82,14 @@ function Re(){
     tried = tried + 1;
 }
 
+function alienAngry(){
+    document.querySelector("#alien1").classList.add("hidden");
+    document.querySelector("#alien2").classList.remove("hidden");
+}
+
+function alienNormal(){
+    document.querySelector("#alien2").classList.add("hidden");
+    document.querySelector("#alien1").classList.remove("hidden");
+}
+
 submitForm.addEventListener("submit", sub);
