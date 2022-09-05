@@ -85,7 +85,7 @@ function Re() {
 
 function alienIs() {
     imgClick++;
-    if (imgClick === 20) {
+    if (imgClick === 15) {
         alert("적당히 하셈");
         imgClick = 0;
     }
