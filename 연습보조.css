@@ -1,56 +1,65 @@
 #submit {
-    border: 2px solid; 
-    margin-left:20%; 
-    margin-right:20%; 
-    top:30px;
+    border: 2px solid;
+    margin-left: 20%;
+    margin-right: 20%;
+    top: 30px;
 }
+
 #age {
-    border: 2px solid; 
-    background-color: rgb(220, 216, 216); 
+    border: 2px solid;
+    background-color: rgb(220, 216, 216);
 }
+
 #gender {
-    border: 2px solid; 
-    background-color: rgb(220, 216, 216); 
+    border: 2px solid;
+    background-color: rgb(220, 216, 216);
 }
+
 #chicken {
-    border: 2px solid; 
-    background-color: rgb(220, 216, 216); 
+    border: 2px solid;
+    background-color: rgb(220, 216, 216);
 }
+
 #whatcolor {
-    border: 2px solid; 
-    background-color: rgb(220, 216, 216); 
+    border: 2px solid;
+    background-color: rgb(220, 216, 216);
 }
+
 #center {
     text-align: center;
-    margin-left:20%; 
-    margin-right:20%; 
+    margin-left: 20%;
+    margin-right: 20%;
 }
-.left{
+
+.left {
     text-align: left;
 }
+
 .alien {
-    width : 20%;
-    height : 20%;
+    width: 20%;
+    height: 20%;
 }
-.header{
+
+.header {
     font-size: 20px;
     vertical-align: top;
     text-align: center;
 }
-.points{
-    text-align: center; 
-    width : 70%; 
+
+.points {
+    text-align: center;
+    width: 70%;
     height: 10px;
 }
 
-.agepoints{
-    text-align: center; 
-    width : 70%; 
+.agepoints {
+    text-align: center;
+    width: 70%;
     height: 10px;
 }
 
-.hidden{
-    display : none;
+.hidden {
+    display: none;
 }
 
 #checkList {
