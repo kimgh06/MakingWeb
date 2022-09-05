@@ -13,7 +13,8 @@ let checkGender;
 let checkChicken;
 const yourChicken = document.querySelector(".DoULikeChicken");
 let tried = 1;
-function sub(event){
+let imgClick = 0;
+function sub(event) {
     event.preventDefault();
     const yourGenderValue = yourgender.options[yourgender.selectedIndex].value;
     const chickenValue = yourChicken.options[yourChicken.selectedIndex].value;
@@ -33,16 +34,16 @@ function sub(event){
     whatsYourGender(yourGenderValue);
     checkSpan.style.color = colorValue;
     checkSpan.innerText = `당신은 치킨을 ${checkChicken} ${ageValue}세 ${checkGender}이군요!`;
-    if (tried == 10){
+    if (tried == 10) {
         triedSpan.innerText = "열 번 시도하셨습니다.";
     }
-    else if (tried == 4){
+    else if (tried == 4) {
         triedSpan.innerText = "404 NOT FOUND";
     }
-    else if (tried == 7){
+    else if (tried == 7) {
         triedSpan.innerText = "당신은 정말 운이 좋으신지도 모르겠습니다.";
     }
-    else if(tried == 1101){
+    else if (tried == 1101) {
         triedSpan.innerText = "이 날짜는 제작자의 생일입니다.";
     }
     else {
@@ -50,11 +51,11 @@ function sub(event){
     }
 }
 
-function whatsYourGender(yourGenderValue){
-    if (yourGenderValue === "female"){
+function whatsYourGender(yourGenderValue) {
+    if (yourGenderValue === "female") {
         checkGender = '여성';
     }
-    else if (yourGenderValue === "male"){
+    else if (yourGenderValue === "male") {
         checkGender = '남성';
     }
     else {
@@ -62,34 +63,42 @@ function whatsYourGender(yourGenderValue){
     }
 }
 
-function chick(like){
-    if(like === 'yes'){
+function chick(like) {
+    if (like === 'yes') {
         checkChicken = "좋아하는";
     }
-    else if(like === 'no'){
+    else if (like === 'no') {
         checkChicken = "좋아하지 않는";
     }
 }
 
-function Re(){
+function Re() {
     question.classList.remove("hidden");
     checkList.classList.add("hidden");
     age.value = "20";
-    document.getElementById('value2').innerHTML="20";
+    document.getElementById('value2').innerHTML = "20";
     yourChicken.value = "no";
     yourgender.value = "none";
     color.value = "#ff0000";
-    tried = tried + 1;
+    tried++;
 }
 
-function alienAngry(){
-    document.querySelector("#alien1").classList.add("hidden");
-    document.querySelector("#alien2").classList.remove("hidden");
-}
-
-function alienNormal(){
-    document.querySelector("#alien2").classList.add("hidden");
-    document.querySelector("#alien1").classList.remove("hidden");
+function alienIs() {
+    imgClick++;
+    if (imgClick === 20) {
+        alert("적당히 하셈");
+        imgClick = 0;
+    }
+    else {
+        if (document.querySelector("#alien1").classList.contains("hidden")) {
+            document.querySelector("#alien1").classList.remove("hidden");
+            document.querySelector("#alien2").classList.add("hidden");
+        }
+        else {
+            document.querySelector("#alien1").classList.add("hidden");
+            document.querySelector("#alien2").classList.remove("hidden");
+        }
+    }
 }
 
 submitForm.addEventListener("submit", sub);
