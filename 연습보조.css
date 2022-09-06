@@ -72,7 +72,7 @@ aside {
     position: fixed;
     top: 0px;
     left: 0px;
-    width: 17%;
+    width: 20%;
     height:100%;
     background-color: rgb(105, 191, 225);
     transition: all 0.5s ease;
@@ -80,6 +80,7 @@ aside {
 
 #main{
     margin-left: 17%;
+    transition: all 0.5s ease;
 }
 
 #menu{
@@ -89,5 +90,12 @@ aside {
     margin-top: 10px; 
     font-size: 20px; 
     background-color: white; 
-    border: 1px solid rgb(215, 215, 215)
+    border: 1px solid rgb(215, 215, 215);
+    transition: all 0.5s ease;
+}
+
+.link{
+    color:white; 
+    text-decoration: none; 
+    text-decoration-line: none;
 }
