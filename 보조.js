@@ -105,11 +105,11 @@ function toggleMenu() {
     if (document.querySelector("#toToggle").classList.contains("hidden")) {
         document.querySelector("#toToggle").classList.remove("hidden");
         document.querySelector("aside").style.backgroundColor = "rgb(105, 191, 225)"; //색깔 변경
-        document.querySelector("#main").style.marginLeft = "17%"; //(메인 좌측 여백 설정)
+        document.querySelector("#main").style.marginLeft = "20%"; //(메인 좌측 여백 설정)
     }
     else {
         document.querySelector("#toToggle").classList.add("hidden");
-        document.querySelector("aside").style.backgroundColor = "white"; //색깔 변경
+        document.querySelector("aside").style.backgroundColor = "rgba(255, 255, 255, 0)"; //색깔 변경
         document.querySelector("#main").style.marginLeft = "0%"; //(메인 좌측 여백 설정)
     }
 }
