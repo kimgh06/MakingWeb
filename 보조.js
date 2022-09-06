@@ -103,19 +103,23 @@ function alienIs() {
 
 function toggleMenu() {
     const menu = document.querySelector("#menu");
-    if (document.querySelector("#toToggle").classList.contains("hidden")) {
-        document.querySelector("#toToggle").classList.remove("hidden");
+    const toToggle = document.querySelector("#toToggle");
+    if (toToggle.classList.contains("hidden")) {
+        toToggle.classList.remove("hidden");
         document.querySelector("aside").style.backgroundColor = "rgb(105, 191, 225)"; //사이드 색깔 변경
         menu.style.backgroundColor = "white"; //버튼 색깔 변경
         menu.style.color = "black";
         document.querySelector("#main").style.marginLeft = "20%";
+        menu.style.transform = "rotate(0deg)";
     }
     else {
-        document.querySelector("#toToggle").classList.add("hidden");
+        toToggle.classList.add("hidden");
         document.querySelector("aside").style.backgroundColor = "rgba(255, 255, 255, 0)"; //사이드 색깔 변경
         menu.style.backgroundColor = "rgb(105, 191, 225)"; //버튼 색깔 변경
         menu.style.color = "white";
         document.querySelector("#main").style.marginLeft = "0%";
+        menu.style.transform = "rotate(180deg)";
+
     }
 }
 
